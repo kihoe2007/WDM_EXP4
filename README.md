@@ -15,10 +15,9 @@
 
 ### Program:
 ```python
-# Import required libraries
 import pandas as pd
 import matplotlib.pyplot as plt
-
+from sklearn.cluster import KMeans
 # Read the CSV file
 data = pd.read_csv("visitors.csv")
 
@@ -61,9 +60,18 @@ plt.xlabel("Age Groups")
 plt.ylabel("Number of Visitors")
 plt.title("Visitor Distribution Across Age Groups")
 plt.show()
+# Visualize clusters
+plt.scatter(data["Age"], data["Cluster"], c=data["Cluster"], cmap="viridis")
+plt.xlabel("Age")
+plt.ylabel("Cluster")
+plt.title("Visitor Segmentation using K-Means")
+plt.show()
 ```
 ### Output:
-<img width="737" height="576" alt="Screenshot 2026-08-04 113330" src="https://github.com/user-attachments/assets/1bb58fc8-4939-4da4-89f7-0309363eea5e" />
+<img width="985" height="700" alt="image" src="https://github.com/user-attachments/assets/4b994bef-36a1-441e-965e-65555271e58f" />
+
+<img width="921" height="661" alt="image" src="https://github.com/user-attachments/assets/f2bb9a54-12ea-4444-9bb7-34ffb13d2c5b" />
+
 
 
 ### Result:
